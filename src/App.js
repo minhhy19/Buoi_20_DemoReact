@@ -10,6 +10,12 @@ import StyleComponent from './StyleComponent/StyleComponent';
 import BaiTapChonXe from './StateDemo/BaiTapChonXe/BaiTapChonXe';
 import BaiTapTangGiamFont from './BaiTapTangGiamFont/BaiTapTangGiamFont';
 import RenderWithMap from './RenderWithMap/RenderWithMap';
+import DemoProps from './Props/DemoProps/DemoProps';
+import BaiTapQLSP from './Props/BaiTapQLSP/BaiTapQLSP';
+import BaiTapXemChiTiet from './Props/BaiTapXemChiTiet/BaiTapXemChiTiet';
+import ExerciseCarStore from './Props/ExerciseCarStore/ExerciseCarStore';
+import DemoPropsChildren from './Props/DemoPropsChildren/DemoPropsChildren';
+import BaiTapChonXeRedux from './DemoRedux/BaiTapChonXeRedux/BaiTapChonXeRedux';
 
 function App() {
   return (
@@ -25,7 +31,13 @@ function App() {
       {/* <p className='pColorRed'>Hello Cybersoft</p> */}
       {/* <BaiTapChonXe /> */}
       {/* <BaiTapTangGiamFont /> */}
-      <RenderWithMap />
+      {/* <RenderWithMap /> */}
+      {/* <DemoProps /> */}
+      {/* <BaiTapQLSP /> */}
+      <BaiTapXemChiTiet />
+      {/* <ExerciseCarStore /> */}
+      {/* <DemoPropsChildren /> */}
+      {/* <BaiTapChonXeRedux /> */}
     </div>
   );
 }
