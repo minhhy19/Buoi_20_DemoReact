@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import DemoClassComponent from './DemoComponent/DemoClassComponent';
 import DemoFunctionComponent from './DemoComponent/DemoFunctionComponent';
 import BaiTapDungLayout from './BaiTapDungLayout/BaiTapDungLayout';
@@ -16,6 +15,7 @@ import BaiTapXemChiTiet from './Props/BaiTapXemChiTiet/BaiTapXemChiTiet';
 import ExerciseCarStore from './Props/ExerciseCarStore/ExerciseCarStore';
 import DemoPropsChildren from './Props/DemoPropsChildren/DemoPropsChildren';
 import BaiTapChonXeRedux from './DemoRedux/BaiTapChonXeRedux/BaiTapChonXeRedux';
+import BaiTapGameXucXac from './DemoRedux/BaiTapGameXucXac/BaiTapGameXucXac';
 
 function App() {
   return (
@@ -34,10 +34,11 @@ function App() {
       {/* <RenderWithMap /> */}
       {/* <DemoProps /> */}
       {/* <BaiTapQLSP /> */}
-      <BaiTapXemChiTiet />
+      {/* <BaiTapXemChiTiet /> */}
       {/* <ExerciseCarStore /> */}
       {/* <DemoPropsChildren /> */}
       {/* <BaiTapChonXeRedux /> */}
+      <BaiTapGameXucXac />
     </div>
   );
 }

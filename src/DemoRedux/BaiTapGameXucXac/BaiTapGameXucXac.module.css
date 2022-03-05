@@ -1,0 +1,14 @@
+/* 
+    Các file css khi start ứng dụng thì cấu trúc thư mục sẽ bị thay đổi 
+    vì vậy các thuộc tính về background-image hoặc font-face... đường
+    dẫn sẽ bị thay đổi
+*/
+
+@font-face {
+    font-family: fontGame;
+    src: url('../../assets/BaiTapGameXucXac/Font/Pony.ttf');
+}
+
+.fontGame {
+    font-family: fontGame;
+}
