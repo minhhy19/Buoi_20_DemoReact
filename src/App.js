@@ -16,6 +16,9 @@ import ExerciseCarStore from './Props/ExerciseCarStore/ExerciseCarStore';
 import DemoPropsChildren from './Props/DemoPropsChildren/DemoPropsChildren';
 import BaiTapChonXeRedux from './DemoRedux/BaiTapChonXeRedux/BaiTapChonXeRedux';
 import BaiTapGameXucXac from './DemoRedux/BaiTapGameXucXac/BaiTapGameXucXac';
+import BaiTapQuanLyNguoiDung from './DemoRedux/BaiTapQuanLyNguoiDung/BaiTapQuanLyNguoiDung';
+import ReactLifeCycle from './ReactLifeCycle/ReactLifeCycle';
+import AxiosDemo from './AxiosDemo/AxiosDemo';
 
 function App() {
   return (
@@ -38,7 +41,10 @@ function App() {
       {/* <ExerciseCarStore /> */}
       {/* <DemoPropsChildren /> */}
       {/* <BaiTapChonXeRedux /> */}
-      <BaiTapGameXucXac />
+      {/* <BaiTapGameXucXac /> */}
+      {/* <BaiTapQuanLyNguoiDung /> */}
+      {/* <ReactLifeCycle /> */}
+      <AxiosDemo />
     </div>
   );
 }
