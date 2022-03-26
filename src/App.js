@@ -30,6 +30,14 @@ import HeaderHome from './Components/HeaderHome/HeaderHome';
 import Detail from './pages/Detail/Detail';
 import AdminIndex from './pages/Admin/AdminIndex/AdminIndex';
 import HookUseState from './pages/HookReact/HookUseState/HookUseState';
+import HookUseEffect from './pages/HookReact/HookUseEffect/HookUseEffect';
+import ParentComponent from './pages/HookReact/HookUseCallBack/ParentComponent';
+import HookUseMemo from './pages/HookReact/HookUseMemo/HookUseMemo';
+import HookUseRef from './pages/HookReact/HookUseRef/HookUseRef';
+import HookRedux from './pages/HookReact/HookRedux/HookRedux';
+import ToDoList from './pages/HookReact/ToDoList/ToDoList';
+import DemoHOCModal from './pages/HOC/DemoHOCModal/DemoHOCModal';
+import ModalHOC from './pages/HOC/DemoHOCModal/ModalHOC';
 
 function App() {
   return (
@@ -68,8 +76,17 @@ function App() {
         <Route exact path={'/detail/:id'} component={Detail} />
         <Route exact path={'/admin'} component={AdminIndex} />
         <Route exact path={'/hookusestate'} component={HookUseState} />
+        <Route exact path={'/hookuseeffect'} component={HookUseEffect} />
+        <Route exact path={'/hookusecallback'} component={ParentComponent} />
+        <Route exact path={'/hookusememo'} component={HookUseMemo} />
+        <Route exact path={'/hookuseref'} component={HookUseRef} />
+        <Route exact path={'/hookredux'} component={HookRedux} />
+        <Route exact path={'/todolist'} component={ToDoList} />
+        <Route exact path={'/demohocmodal'} component={DemoHOCModal} />
         <Route exact path={'/'} component={Home} />
       </Switch>
+
+      <ModalHOC />
     </BrowserRouter>
   );
 }

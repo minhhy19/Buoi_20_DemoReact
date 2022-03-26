@@ -44,6 +44,11 @@ export default class HeaderHome extends Component {
                                 Login
                             </NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink exact activeClassName="bg-white text-dark" className="nav-link" to="/demohocmodal">
+                                HOC
+                            </NavLink>
+                        </li>
                         <li className="nav-item dropdown">
                             <a
                                 className="nav-link dropdown-toggle"
@@ -61,6 +66,24 @@ export default class HeaderHome extends Component {
                             >
                                 <NavLink className="dropdown-item" to="/hookusestate">
                                     UseState
+                                </NavLink>
+                                <NavLink className="dropdown-item" to="/hookuseeffect">
+                                    UseEffect
+                                </NavLink>
+                                <NavLink className="dropdown-item" to="/hookusecallback">
+                                    UseCallback
+                                </NavLink>
+                                <NavLink className="dropdown-item" to="/hookusememo">
+                                    UseMemo
+                                </NavLink>
+                                <NavLink className="dropdown-item" to="/hookuseref">
+                                    UseRef
+                                </NavLink>
+                                <NavLink className="dropdown-item" to="/hookredux">
+                                    Hook Redux
+                                </NavLink>
+                                <NavLink className="dropdown-item" to="/todolist">
+                                    To Do List
                                 </NavLink>
                             </div>
                         </li>
