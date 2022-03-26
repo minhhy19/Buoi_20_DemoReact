@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-
-export default class Login extends Component {
+import { connect } from 'react-redux'
+import { dangNhapAction } from '../../redux/actions/quanLyNguoiDungAction'
+class Login extends Component {
   state = {
     taiKhoan: '',
     matKhau: ''
@@ -15,19 +16,10 @@ export default class Login extends Component {
   handleSubmit = (e) => {
     // Sự kiện cản reload browser
     e.preventDefault();
-    let {taiKhoan, matKhau} = this.state;
-    if (taiKhoan === 'cybersoft' && matKhau === 'cybersoft') {
-      localStorage.setItem('userLogin', 'nguoiDung');
-      // Chuyển hướng về home
-      this.props.history.push('/home');
-      //Thay đổi trang hiện tại bằng trang chỉ định
-      // this.props.history.replace('/home');
-    } else if (taiKhoan === 'admin' && matKhau === 'admin') {
-      localStorage.setItem('userLogin', 'admin');
-      this.props.history.push('/admin');
-    } else {
-      alert('Tài khoản hoặc mật khẩu không đúng!');
-    }
+    const action = dangNhapAction(this.state);
+    // tốn khoảng tg api kiểm tra
+    this.props.dispatch(action);
+    // this.props.history.push
   }
   render() {
     return (
@@ -48,3 +40,7 @@ export default class Login extends Component {
     )
   }
 }
+
+
+
+export default connect()(Login)

@@ -19,7 +19,7 @@ import BaiTapGameXucXac from './DemoRedux/BaiTapGameXucXac/BaiTapGameXucXac';
 import BaiTapQuanLyNguoiDung from './DemoRedux/BaiTapQuanLyNguoiDung/BaiTapQuanLyNguoiDung';
 import ReactLifeCycle from './ReactLifeCycle/ReactLifeCycle';
 import AxiosDemo from './AxiosDemo/AxiosDemo';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Router } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Contact from './pages/Contact/Contact';
 import Login from './pages/Login/Login';
@@ -38,10 +38,15 @@ import HookRedux from './pages/HookReact/HookRedux/HookRedux';
 import ToDoList from './pages/HookReact/ToDoList/ToDoList';
 import DemoHOCModal from './pages/HOC/DemoHOCModal/DemoHOCModal';
 import ModalHOC from './pages/HOC/DemoHOCModal/ModalHOC';
+import { HomeTemplate } from './templates/HomeTemplate';
+import { UserTemplate } from './templates/UserTemplate';
+import DemoAntd from './pages/DemoAntd/DemoAntd';
+import { AdminTemplate } from './templates/AdminTemplate';
+import { history } from './util/settting';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router history={history}>
       {/* <div className="App"> */}
         {/* <DemoClassComponent /> */}
         {/* <DemoFunctionComponent /> */}
@@ -66,28 +71,29 @@ function App() {
         {/* <ReactLifeCycle /> */}
         {/* <AxiosDemo /> */}
       {/* </div> */}
-      <HeaderHome />
+      {/* <HeaderHome /> */}
       <Switch>
-        <Route exact path={'/home'} component={Home} />
-        <Route exact path={'/contact'} component={Contact} />
-        <Route exact path={'/login'} component={Login} />
-        <Route exact path={'/register'} component={Register} />
-        <Route exact path={'/about'} component={About} />
-        <Route exact path={'/detail/:id'} component={Detail} />
-        <Route exact path={'/admin'} component={AdminIndex} />
-        <Route exact path={'/hookusestate'} component={HookUseState} />
-        <Route exact path={'/hookuseeffect'} component={HookUseEffect} />
-        <Route exact path={'/hookusecallback'} component={ParentComponent} />
-        <Route exact path={'/hookusememo'} component={HookUseMemo} />
-        <Route exact path={'/hookuseref'} component={HookUseRef} />
-        <Route exact path={'/hookredux'} component={HookRedux} />
-        <Route exact path={'/todolist'} component={ToDoList} />
-        <Route exact path={'/demohocmodal'} component={DemoHOCModal} />
-        <Route exact path={'/'} component={Home} />
+        <HomeTemplate path={'/home'} component={Home} />
+        <HomeTemplate path={'/contact'} component={Contact} />
+        <UserTemplate path={'/login'} component={Login} />
+        <UserTemplate path={'/register'} component={Register} />
+        <HomeTemplate path={'/about'} component={About} />
+        <HomeTemplate path={'/detail/:id'} component={Detail} />
+        <HomeTemplate path={'/admin'} component={AdminIndex} />
+        <HomeTemplate path={'/hookusestate'} component={HookUseState} />
+        <HomeTemplate path={'/hookuseeffect'} component={HookUseEffect} />
+        <HomeTemplate path={'/hookusecallback'} component={ParentComponent} />
+        <HomeTemplate path={'/hookusememo'} component={HookUseMemo} />
+        <HomeTemplate path={'/hookuseref'} component={HookUseRef} />
+        <HomeTemplate path={'/hookredux'} component={HookRedux} />
+        <HomeTemplate path={'/todolist'} component={ToDoList} />
+        <AdminTemplate path={'/demohocmodal'} component={DemoHOCModal} />
+        
+        <HomeTemplate path={'/'} component={Home} />
       </Switch>
 
       <ModalHOC />
-    </BrowserRouter>
+    </Router>
   );
 }
 
