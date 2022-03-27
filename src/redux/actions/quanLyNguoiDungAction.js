@@ -1,5 +1,5 @@
 import axios from "axios"
-import { ACCESSTOKEN, DOMAIN, TOKEN_CYBERSOFT, USER_LOGIN } from "../../util/settting"
+import { ACCESSTOKEN, DOMAIN, http, TOKEN_CYBERSOFT, USER_LOGIN } from "../../util/settting"
 import { history } from '../../util/settting';
 
 // userLogin: {taiKhoan: '', matKhau: ''}
@@ -26,6 +26,26 @@ export const dangNhapAction = (userLogin) => {
             // Chuyển hướng trang
             history.push('/home');
         } catch (err) {
+            console.log(err.response?.data);
+        }
+    }
+}
+
+export const layThongTinNguoiDungAction = () => {
+    return async (dispatch) => {
+        try {
+            let result = await http.post('/api/QuanLyNguoiDung/ThongTinTaiKhoan');
+            console.log(result);
+            // dispatch kết quả lên redux
+            dispatch({
+                type: 'LAY_THONG_TIN_NGUOI_DUNG',
+                userProfile: result.data.content
+            })
+            
+        } catch (err) {
+            if (err.response.status === 404) {
+                alert('Đường dẫn không hợp lệ');
+            }
             console.log(err.response?.data);
         }
     }

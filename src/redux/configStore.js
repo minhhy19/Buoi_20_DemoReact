@@ -10,6 +10,7 @@ import { toDoListReducer } from "./Reducer/toDoListReducer";
 import reduxThunk from 'redux-thunk';
 import { modalReducer } from "./Reducer/modalReducer";
 import { quanLyNguoiDungReducer } from "./Reducer/quanLyNguoiDungReducer";
+import { quanLyPhimReducer } from "./Reducer/quanLyPhimReducer";
 
 const rootReducer = combineReducers({
     // Nơi chứa các state của ứng dụng
@@ -21,7 +22,8 @@ const rootReducer = combineReducers({
     FakeBookAppReducer,
     toDoListReducer,
     modalReducer,
-    quanLyNguoiDungReducer
+    quanLyNguoiDungReducer,
+    quanLyPhimReducer
 });
 
 let middleWare = applyMiddleware(reduxThunk);

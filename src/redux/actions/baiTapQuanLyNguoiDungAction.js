@@ -1,3 +1,5 @@
+import axios from "axios"
+import { ACCESSTOKEN, DOMAIN, http, TOKEN_CYBERSOFT } from "../../util/settting"
 import { THEM_NGUOI_DUNG } from "./types/baiTapQuanLyNguoiDungType"
 
 

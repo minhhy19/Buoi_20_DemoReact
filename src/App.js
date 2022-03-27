@@ -43,6 +43,8 @@ import { UserTemplate } from './templates/UserTemplate';
 import DemoAntd from './pages/DemoAntd/DemoAntd';
 import { AdminTemplate } from './templates/AdminTemplate';
 import { history } from './util/settting';
+import Profile from './pages/Profile/Profile';
+import HomeMobile from './pages/Home/HomeMobile';
 
 function App() {
   return (
@@ -73,7 +75,7 @@ function App() {
       {/* </div> */}
       {/* <HeaderHome /> */}
       <Switch>
-        <HomeTemplate path={'/home'} component={Home} />
+        <HomeTemplate path={'/home'} component={Home} mobileComponent={HomeMobile} />
         <HomeTemplate path={'/contact'} component={Contact} />
         <UserTemplate path={'/login'} component={Login} />
         <UserTemplate path={'/register'} component={Register} />
@@ -87,9 +89,10 @@ function App() {
         <HomeTemplate path={'/hookuseref'} component={HookUseRef} />
         <HomeTemplate path={'/hookredux'} component={HookRedux} />
         <HomeTemplate path={'/todolist'} component={ToDoList} />
+        <HomeTemplate path={'/profile'} component={Profile} />
         <AdminTemplate path={'/demohocmodal'} component={DemoHOCModal} />
         
-        <HomeTemplate path={'/'} component={Home} />
+        <HomeTemplate path={'/'} component={Home} mobileComponent={HomeMobile} />
       </Switch>
 
       <ModalHOC />

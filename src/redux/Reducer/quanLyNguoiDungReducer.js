@@ -7,11 +7,16 @@ if (localStorage.getItem(USER_LOGIN)) {
 }
 
 const stateDefault = {
-    userLogin: usLogin
+    userLogin: usLogin,
+    userProfile: {}
 }
 
 export const quanLyNguoiDungReducer = (state = stateDefault, action) => {
     switch(action.type) {
+        case 'LAY_THONG_TIN_NGUOI_DUNG': {
+            state.userProfile = action.userProfile;
+            return {...state};
+        }
         default: return state;
     }
 }
